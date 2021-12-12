@@ -7,7 +7,7 @@ Q1
 import pandas as pd
 
 
-adult_Data = pd.read_csv("adult.csv")
+adult_Data = pd.read_csv("D:\Document\UKC\BUSN9690\Python\adult.csv",head = 0)
 
 sampleData=Adult_Data.sample(n=4000,replace=False)
 
@@ -34,8 +34,8 @@ len1=len(Adult_df) #to assign the sample size of Adult_df to len1
 newAdult=[] #initialize newAdult
 col1=list(Adult_df.columns) #to assign the row of variables to col1
 newAdult.append(col1) #append the header to newAdult
-Answers in Week 8 
-Page 2
+
+
 for k in np.arange(0, len1, 1000):
  newAdult.append(list(Adult_df.iloc[k, :])) #to append the k-th observation to newAdult
 resulting_df=pd.DataFrame(newAdult) #the result you needed
